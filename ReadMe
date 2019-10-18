@@ -1,0 +1,15 @@
+## 发送中无法取消文件发送 
+## 大文件传输容错率较低 
+## 同一链接无法实现文件 普通消息优先级  
+大份数据拆分成小份数据+头，分片去掉，组合内容实现packet body部分。 
+packet-> write ->ioargs
+inputstream ->buffer-> 填充分片frame 再使用ioargs发送 
+
+## 根据文件大小计算分片，并读取数据到分片 packet 头+体 
+## 分片数据固定格式打包发送（分片数据格式）
+## 分片数据解析与分片组装 
+## Dispatcher调度逻辑调整  
+
+packet->ioargs->发送  
+packet->frame->ioargs
+   
