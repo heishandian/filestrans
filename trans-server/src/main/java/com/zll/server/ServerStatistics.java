@@ -4,6 +4,9 @@ import com.zll.foo.handler.ConnectorHandler;
 import com.zll.foo.handler.ConnctorStringPacketChain;
 import com.zll.lib.link.box.StringReceivePacket;
 
+/**
+ *  发送，接收统计
+ */
 public class ServerStatistics {
 
 	long sendSize;
